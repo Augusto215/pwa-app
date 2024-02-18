@@ -1,5 +1,5 @@
 var staticCacheName = "pwa";
- 
+
 self.addEventListener('install', function(event) {
   self.skipWaiting(); // Ativa o Service Worker mais rápido
 
@@ -10,9 +10,13 @@ self.addEventListener('install', function(event) {
     })
   );
 });
+self.addEventListener('activate', event => {
+  event.waitUntil(self.clients.claim());
+});
+
  
 self.addEventListener("fetch", function (event) {
-  console.log(event.request.url);
+  console.log(event.request.url); 
  
   event.respondWith(
     caches.match(event.request).then(function (response) {
@@ -31,6 +35,7 @@ self.addEventListener('push', function(event) {
       primaryKey: 1
     }
   };
+
   event.waitUntil(
     self.registration.showNotification('Push Notificação', options)
   );
