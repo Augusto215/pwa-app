@@ -1,20 +1,20 @@
 {
-    "name":"PWA Tutorial",
+    "name":"NUBANK",
     "short_name":"PWA",
     "start_url":"index.html",
     "display":"standalone",
     "background_color":"#5900b3",
     "theme_color":"black",
     "scope": ".",
-    "description":"This is a PWA tutorial.",
+    "description":"NUBANK",
     "icons":[
     {
-    "src":"images/icon-192x192.png",                     
+    "src":"assets/img/anne-peres-plsF6obTgms-unsplash.jpg",                     
     "sizes":"192x192",
     "type":"image/png"
     },
     {
-    "src":"images/icon-512x512.png",
+    "src":"assets/img/anne-peres-plsF6obTgms-unsplash.jpg",
     "sizes":"512x512",
     "type":"image/png"
     }
